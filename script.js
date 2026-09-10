@@ -1,8 +1,8 @@
 (function () {
   const root = document.documentElement;
 
-  // Year
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
   // Theme
   const THEME_KEY = "portfolio_theme";
@@ -17,110 +17,121 @@
   const savedTheme = localStorage.getItem(THEME_KEY);
   if (savedTheme) applyTheme(savedTheme);
   else {
-    // Prefer system
     const prefersLight =
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: light)").matches;
     applyTheme(prefersLight ? "light" : "dark");
   }
 
-  themeToggle.addEventListener("click", () => {
-    const isLight = root.getAttribute("data-theme") === "light";
-    applyTheme(isLight ? "dark" : "light");
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const isLight = root.getAttribute("data-theme") === "light";
+      applyTheme(isLight ? "dark" : "light");
+    });
+  }
 
-  // Mobile nav
+  // Mobile navigation
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
 
-  navToggle.addEventListener("click", () => {
-    const open = navMenu.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
-  // Close menu on nav link click (mobile)
-  navMenu.querySelectorAll("a.nav-link").forEach((a) => {
-    a.addEventListener("click", () => {
-      navMenu.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      const open = navMenu.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
-  });
 
-  // Projects filter
+    navMenu.querySelectorAll("a.nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // Project filters
   const projectsGrid = document.getElementById("projectsGrid");
   const filterButtons = document.querySelectorAll("[data-filter]");
 
-  function setActiveFilter(btn) {
-    filterButtons.forEach((b) => b.classList.remove("is-active"));
-    btn.classList.add("is-active");
+  function setActiveFilter(button) {
+    filterButtons.forEach((item) => item.classList.remove("is-active"));
+    button.classList.add("is-active");
   }
 
   function filterProjects(tag) {
-    const items = projectsGrid.querySelectorAll(".project");
-    items.forEach((card) => {
-      const tags = (card.getAttribute("data-tags") || "")
-        .split(/\s+/)
-        .filter(Boolean);
-      const show = tag === "all" ? true : tags.includes(tag);
-      card.classList.toggle("is-hidden", !show);
+    if (!projectsGrid) return;
+    projectsGrid.querySelectorAll(".project").forEach((card) => {
+      const tags = (card.getAttribute("data-tags") || "").split(/\s+/).filter(Boolean);
+      card.classList.toggle("is-hidden", tag !== "all" && !tags.includes(tag));
     });
   }
 
-  filterButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const tag = btn.getAttribute("data-filter");
-      setActiveFilter(btn);
-      filterProjects(tag);
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setActiveFilter(button);
+      filterProjects(button.getAttribute("data-filter"));
     });
   });
 
-  // Default filter
   if (filterButtons.length) {
     setActiveFilter(filterButtons[0]);
     filterProjects("all");
   }
 
-  // Skills search (filters chips + groups)
-  const skillSearch = document.getElementById("skillSearch");
-  const skillGroups = document.querySelectorAll(".skill-group");
+  // Scroll reveal
+  const revealItems = document.querySelectorAll(".reveal");
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function normalize(s) {
-    return (s || "").toLowerCase().trim();
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  } else {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -36px" }
+    );
+    revealItems.forEach((item) => revealObserver.observe(item));
   }
 
-  function applySkillsSearch(query) {
-    const q = normalize(query);
+  // Active navigation section
+  const navLinks = Array.from(document.querySelectorAll(".nav-link[href^='#']"));
+  const sections = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
 
-    skillGroups.forEach((group) => {
-      const chips = group.querySelectorAll(".chip");
-      let anyVisible = false;
-
-      chips.forEach((chip) => {
-        const match = normalize(chip.textContent).includes(q);
-        const show = q === "" ? true : match;
-        chip.classList.toggle("is-hidden", !show);
-        if (show) anyVisible = true;
-      });
-
-      // If search is empty show all; else show group only if at least one chip visible
-      group.classList.toggle("is-hidden", q !== "" && !anyVisible);
-    });
+  if ("IntersectionObserver" in window && sections.length) {
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        navLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
+        });
+      },
+      { rootMargin: "-35% 0px -55%", threshold: [0, 0.25, 0.5, 0.75] }
+    );
+    sections.forEach((section) => navObserver.observe(section));
   }
 
-  skillSearch.addEventListener("input", (e) =>
-    applySkillsSearch(e.target.value)
-  );
-
-  // Contact "mailto" form
+  // Contact mailto form
   const mailForm = document.getElementById("mailForm");
   const mailSubject = document.getElementById("mailSubject");
   const mailBody = document.getElementById("mailBody");
 
-  mailForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(mailSubject.value.trim());
-    const body = encodeURIComponent(mailBody.value.trim());
-    const to = "you@example.com"; // CHANGE THIS
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  });
+  if (mailForm && mailSubject && mailBody) {
+    mailForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const subject = encodeURIComponent(mailSubject.value.trim());
+      const body = encodeURIComponent(mailBody.value.trim());
+      const to = "mohammadjaseem2004@gmail.com";
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  }
 })();

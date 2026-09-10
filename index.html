@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Backend Software Engineer Portfolio — Laravel & NestJS"
+      content="Mohammad Jassem — Software Engineering graduate focused on backend development with Laravel, NestJS, PostgreSQL, MySQL, Redis, Docker, and maintainable API design."
     />
-    <title>Mohammad Jasseem — Backend Engineer</title>
+    <meta name="theme-color" content="#0a1020" />
+    <title>Mohammad Jassem — Backend Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,16 +24,17 @@
     <header class="site-header" id="top">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="Go to top">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span class="brand-text">Mohammad Jasseem</span>
+          <span class="brand-mark" aria-hidden="true">MJ</span>
+          <span class="brand-text">Mohammad Jassem</span>
         </a>
 
-        <nav class="nav" aria-label="Primary">
+        <nav class="nav" aria-label="Primary navigation">
           <button
             class="nav-toggle"
             id="navToggle"
             aria-expanded="false"
             aria-controls="navMenu"
+            type="button"
           >
             <span class="nav-toggle-line"></span>
             <span class="nav-toggle-line"></span>
@@ -44,19 +46,25 @@
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#education">Education</a>
             <a class="nav-link" href="#contact">Contact</a>
 
             <div class="nav-actions">
               <button
-                class="btn btn-ghost"
+                class="btn btn-ghost btn-compact"
                 id="themeToggle"
                 type="button"
-                aria-label="Toggle theme"
+                aria-label="Toggle color theme"
               >
                 <span class="theme-icon" aria-hidden="true">◐</span>
                 <span class="btn-text">Theme</span>
               </button>
-              <a class="btn btn-primary" href="#contact">Hire / Contact</a>
+              <a
+                class="btn btn-primary btn-compact"
+                href="https://github.com/Mohammad11Jassem"
+                target="_blank"
+                rel="noreferrer"
+              >GitHub ↗</a>
             </div>
           </div>
         </nav>
@@ -65,71 +73,84 @@
 
     <main id="main">
       <!-- HERO -->
-      <section class="section hero">
+      <section class="section hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
-          <div class="hero-content">
+          <div class="hero-content reveal">
             <p class="pill">
               <span class="pill-dot" aria-hidden="true"></span>
-              Backend Software Engineer
+              Software Engineering Graduate
             </p>
 
-            <h1 class="hero-title">
-              Building reliable APIs and backend systems with
-              <span class="gradient-text">Laravel</span> &amp;
-              <span class="gradient-text">NestJS</span>.
+            <h1 class="hero-title" id="hero-title">
+              Building backend systems around
+              <span class="gradient-text">real business workflows</span>.
             </h1>
 
             <p class="hero-subtitle">
-              I design and implement secure, scalable RESTful backends:
-              authentication, RBAC, database design, integrations, queues,
-              caching, and clean architecture.
+              Backend-focused developer working with Laravel and NestJS to build
+              RESTful APIs, relational data models, secure authorization,
+              real-time features, background jobs, caching, and maintainable
+              modular architectures.
             </p>
 
             <div class="hero-cta">
               <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-ghost" href="#skills">Explore Skills</a>
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Mohammad11Jassem"
+                target="_blank"
+                rel="noreferrer"
+              >Explore GitHub ↗</a>
+              <a class="btn btn-textual" href="#contact">Contact me →</a>
             </div>
 
-            <div class="hero-meta">
-              <div class="meta-card">
-                <div class="meta-label">Stack</div>
-                <div class="meta-value">
-                  Laravel • NestJS • PostgreSQL • MySQL
-                </div>
-              </div>
-              <div class="meta-card">
-                <div class="meta-label">Tools</div>
-                <div class="meta-value">Postman • Insomnia • Git • Docker</div>
-              </div>
+            <div class="core-strip" aria-label="Core technologies">
+              <span>Laravel</span>
+              <span>NestJS</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+              <span>Docker</span>
             </div>
           </div>
 
-          <aside class="hero-aside" aria-label="Highlights">
-            <div class="card card-glow">
-              <div class="card-header">
-                <h2 class="card-title">Highlights</h2>
-                <p class="card-subtitle">
-                  What you can expect from my backend work
-                </p>
-              </div>
+          <aside class="hero-aside reveal reveal-delay" aria-label="Backend engineering focus">
+            <div class="card engineering-card">
+              <p class="eyebrow">Backend engineering</p>
+              <h2 class="engineering-title">Backend systems designed around real business workflows.</h2>
+              <p class="engineering-intro">
+                I build backend applications that go beyond CRUD — translating domain requirements into
+                structured APIs, reliable data flows, secure access control, and maintainable application architecture.
+              </p>
 
-              <ul class="checklist">
-                <li>
-                  Well-structured RESTful APIs (versioning, validation,
-                  pagination).
-                </li>
-                <li>Secure auth: JWT / sessions, RBAC, policies/guards.</li>
-                <li>
-                  Database design: migrations, indexing, performance basics.
-                </li>
-                <li>Integrations: email/SMS, payments, webhooks.</li>
-                <li>
-                  Observability: logs, error handling, meaningful responses.
-                </li>
-              </ul>
-
-              <div class="card-footer">
-                <a class="inline-link" href="#contact">Let’s work together →</a>
+              <div class="engineering-focus-grid" aria-label="Backend engineering strengths">
+                <div class="engineering-focus-item">
+                  <span class="focus-mark" aria-hidden="true"></span>
+                  <div>
+                    <h3>API &amp; Services</h3>
+                    <p>RESTful APIs · Integrations · WebSockets</p>
+                  </div>
+                </div>
+                <div class="engineering-focus-item">
+                  <span class="focus-mark" aria-hidden="true"></span>
+                  <div>
+                    <h3>Business Logic</h3>
+                    <p>Workflows · Validation · Authorization</p>
+                  </div>
+                </div>
+                <div class="engineering-focus-item">
+                  <span class="focus-mark" aria-hidden="true"></span>
+                  <div>
+                    <h3>Data Layer</h3>
+                    <p>PostgreSQL · MySQL · Redis · Transactions</p>
+                  </div>
+                </div>
+                <div class="engineering-focus-item">
+                  <span class="focus-mark" aria-hidden="true"></span>
+                  <div>
+                    <h3>Architecture</h3>
+                    <p>Modular Design · SOLID · Maintainability</p>
+                  </div>
+                </div>
               </div>
             </div>
           </aside>
@@ -137,59 +158,42 @@
       </section>
 
       <!-- ABOUT -->
-      <section class="section" id="about">
-        <div class="container two-col">
-          <div>
-            <h2 class="section-title">About</h2>
+      <section class="section section-separated" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="reveal">
+            <p class="eyebrow">About me</p>
+            <h2 class="section-title" id="about-title">Backend-first, engineering-minded.</h2>
             <p class="section-lead">
-              I’m a backend-focused software engineer who enjoys turning
-              requirements into clean, maintainable services. My work emphasizes
-              correctness, security, and clarity—both in code and API design.
+              I am a Software Engineering graduate from Damascus University,
+              focused on backend development. I enjoy translating requirements
+              into structured services, explicit business rules, and reliable database operations.
             </p>
-
-            <div class="info-grid">
-              <div class="info">
-                <div class="info-k">Focus</div>
-                <div class="info-v">APIs • Auth • Databases • Architecture</div>
-              </div>
-              <div class="info">
-                <div class="info-k">Primary</div>
-                <div class="info-v">Laravel (PHP) • NestJS (TypeScript)</div>
-              </div>
-              <div class="info">
-                <div class="info-k">Datastores</div>
-                <div class="info-v">PostgreSQL • MySQL • SQLite</div>
-              </div>
-              <div class="info">
-                <div class="info-k">API Tools</div>
-                <div class="info-v">Postman • Insomnia • Swagger/OpenAPI</div>
-              </div>
-            </div>
+            <p class="section-copy">
+              My project work spans pharmacy SaaS, educational management,
+              tourism booking, and complaint-management systems using Laravel/PHP,
+              NestJS/TypeScript, relational databases, Redis, WebSockets, Docker,
+              Nginx, and third-party integrations.
+            </p>
           </div>
 
-          <div>
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">What I care about</h3>
-                <p class="card-subtitle">
-                  Engineering habits that scale with teams and projects
-                </p>
+          <div class="principles-card reveal reveal-delay">
+            <p class="eyebrow">What I optimize for</p>
+            <div class="principles-list">
+              <div class="principle">
+                <span class="principle-index">01</span>
+                <div><strong>Clear domain logic</strong><small>Business rules that are explicit, testable, and maintainable.</small></div>
               </div>
-
-              <div class="chips" aria-label="Engineering habits">
-                <span class="chip">Clean code</span>
-                <span class="chip">SOLID basics</span>
-                <span class="chip">Reusable modules</span>
-                <span class="chip">Consistent API responses</span>
-                <span class="chip">Validation &amp; error handling</span>
-                <span class="chip">Testing mindset</span>
-                <span class="chip">Documentation</span>
-                <span class="chip">Performance awareness</span>
-                <span class="chip">Security best practices</span>
+              <div class="principle">
+                <span class="principle-index">02</span>
+                <div><strong>Data integrity</strong><small>Validation, transactions, relationships, and predictable state changes.</small></div>
               </div>
-
-              <div class="card-footer">
-                <a class="btn btn-ghost" href="#skills">See full skill map</a>
+              <div class="principle">
+                <span class="principle-index">03</span>
+                <div><strong>Secure APIs</strong><small>Authentication, authorization, RBAC, and clear failure responses.</small></div>
+              </div>
+              <div class="principle">
+                <span class="principle-index">04</span>
+                <div><strong>Operational readiness</strong><small>Documentation, caching, queues, realtime events, and deployment basics.</small></div>
               </div>
             </div>
           </div>
@@ -197,202 +201,185 @@
       </section>
 
       <!-- PROJECTS -->
-      <section class="section" id="projects">
+      <section class="section section-separated" id="projects" aria-labelledby="projects-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head reveal">
             <div>
-              <h2 class="section-title">Projects</h2>
+              <p class="eyebrow">Selected work</p>
+              <h2 class="section-title" id="projects-title">Projects</h2>
               <p class="section-lead">
-                <!-- Replace placeholders with your real projects. Keep each project
-                crisp: what it is, what you built, key features, links. -->
+                End-to-end systems where backend engineering supports real domain workflows.
               </p>
             </div>
 
-            <div class="section-actions">
-              <button class="btn btn-ghost" type="button" data-filter="all">
-                All
-              </button>
-              <button class="btn btn-ghost" type="button" data-filter="laravel">
-                Laravel
-              </button>
-              <button class="btn btn-ghost" type="button" data-filter="nestjs">
-                NestJS
-              </button>
-              <button class="btn btn-ghost" type="button" data-filter="api">
-                API
-              </button>
+            <div class="section-actions" aria-label="Filter projects">
+              <button class="filter-btn" type="button" data-filter="all">All</button>
+              <button class="filter-btn" type="button" data-filter="nestjs">NestJS</button>
+              <button class="filter-btn" type="button" data-filter="laravel">Laravel</button>
+              <button class="filter-btn" type="button" data-filter="ai">AI / RAG</button>
             </div>
           </div>
 
           <div class="projects-grid" id="projectsGrid">
-            <!-- Project 1 -->
-            <article class="project card" data-tags="laravel api mysql auth">
-              <div class="project-top">
-                <h3 class="project-title">Tourism Management System</h3>
-                <p class="project-desc">
-                  Backend API for managing tourism operations (entities,
-                  workflows, and admin features). Built as an API-only service
-                  and consumed by a separate frontend team.
-                </p>
-              </div>
-
-              <div class="project-meta">
-                <div class="badges">
-                  <span class="badge">Laravel</span>
-                  <span class="badge">MySQL</span>
-                  <span class="badge">Sanctum</span>
-                  <span class="badge">REST</span>
-                </div>
-              </div>
-
-              <div class="project-body">
-                <p class="project-label">What I implemented</p>
-                <ul class="bullets">
-                  <li>
-                    API endpoints with validation, consistent responses, and
-                    error handling.
-                  </li>
-                  <li>
-                    Authentication with Laravel Sanctum and protected routes.
-                  </li>
-                  <li>
-                    Database schema & migrations, relationships, and
-                    pagination-ready listing endpoints.
-                  </li>
-                </ul>
-
-                <p class="project-label">Notes</p>
-                <ul class="bullets">
-                  <li>
-                    API-first: frontend team integrated the endpoints with UI.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="project-links">
-                <a
-                  class="inline-link"
-                  href="https://github.com/Mohammad11Jassem/tourism-management-system"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub Repo →</a
-                >
-              </div>
-            </article>
-
-            <!-- Project 2 -->
+            <!-- MediXa -->
             <article
-              class="project card"
-              data-tags="laravel api mysql solid auth"
+              class="project card project-featured reveal"
+              data-tags="nestjs api postgres redis prisma ai docker"
             >
-              <div class="project-top">
-                <h3 class="project-title">Ajyal Educational Institute</h3>
-                <p class="project-desc">
-                  Backend API for an educational institute management system.
-                  Designed for maintainability with SOLID-oriented structure and
-                  integrated by a frontend team.
-                </p>
-              </div>
-
-              <div class="project-meta">
-                <div class="badges">
-                  <span class="badge">Laravel</span>
-                  <span class="badge">MySQL</span>
-                  <span class="badge">Sanctum</span>
-                  <span class="badge">SOLID</span>
+              <div class="featured-accent" aria-hidden="true"></div>
+              <div class="project-featured-header">
+                <div>
+                  <div class="project-kicker-row">
+                    <span class="featured-label">Featured Project</span>
+                    <span class="project-kicker">Graduation Project · 2025–2026</span>
+                  </div>
+                  <h3 class="project-title">MediXa — AI-Powered Pharmacy Management SaaS</h3>
+                  <p class="project-desc project-desc-wide">
+                    Cloud-based pharmacy management platform combining operational workflows,
+                    analytics, and controlled RAG-based drug information retrieval.
+                  </p>
                 </div>
+                <span class="project-role">Backend / Software Engineering</span>
               </div>
 
-              <div class="project-body">
-                <p class="project-label">What I implemented</p>
-                <ul class="bullets">
-                  <li>
-                    API modules organized with SOLID principles (separation of
-                    concerns, reusable services).
-                  </li>
-                  <li>
-                    Authentication & authorization patterns using Laravel
-                    Sanctum.
-                  </li>
-                  <li>
-                    Database design, migrations/seeders, and scalable endpoint
-                    structure.
-                  </li>
-                </ul>
+              <div class="featured-layout">
+                <div class="featured-main">
+                  <div class="badges">
+                    <span class="badge badge-core">NestJS</span>
+                    <span class="badge badge-core">TypeScript</span>
+                    <span class="badge">Prisma ORM</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">Redis</span>
+                    <span class="badge">RAG</span>
+                    <span class="badge">Docker</span>
+                    <span class="badge">Nginx</span>
+                  </div>
 
-                <p class="project-label">Notes</p>
-                <ul class="bullets">
-                  <li>
-                    API-only backend; frontend team handled UI integration.
-                  </li>
-                </ul>
-              </div>
+                  <ul class="project-highlights">
+                    <li>Built modular backend workflows for inventory, drug batches, sales/returns, suppliers, purchasing, subscriptions, and analytics.</li>
+                    <li>Applied transactions, validation, JWT authentication, RBAC, and data-integrity rules across business-critical operations.</li>
+                    <li>Integrated AI-assisted drug consultation with controlled knowledge retrieval alongside Redis-backed and deployment-oriented backend capabilities.</li>
+                  </ul>
 
-              <div class="project-links">
-                <a
-                  class="inline-link"
-                  href="https://github.com/Mohammad11Jassem/Ajyal-"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub Repo →</a
-                >
+                  <div class="project-links">
+                    <a class="project-link primary" href="https://medixa-ai-landing-page.vercel.app/" target="_blank" rel="noreferrer">View Project ↗</a>
+                    <a class="project-link" href="https://github.com/Mohammad11Jassem/pharmacy-saas" target="_blank" rel="noreferrer">GitHub Repo ↗</a>
+                  </div>
+                </div>
+
+                <aside class="architecture-card" aria-label="MediXa architecture snapshot">
+                  <p class="project-label">Architecture snapshot</p>
+                  <div class="arch-flow">
+                    <div class="arch-node"><strong>Clients</strong><span>React / API consumers</span></div>
+                    <span class="arch-arrow">↓</span>
+                    <div class="arch-node is-accent"><strong>NestJS API</strong><span>Modules · Auth · Business Rules</span></div>
+                    <span class="arch-arrow">↓</span>
+                    <div class="arch-split">
+                      <div class="arch-node"><strong>PostgreSQL</strong><span>Relational data</span></div>
+                      <div class="arch-node"><strong>Redis</strong><span>Cache / async support</span></div>
+                    </div>
+                    <span class="arch-arrow">↓</span>
+                    <div class="arch-node"><strong>RAG Layer</strong><span>Controlled pharmaceutical retrieval</span></div>
+                  </div>
+                </aside>
               </div>
             </article>
 
-            <!-- Project 3 -->
-            <article class="project card" data-tags="nestjs api postgres team">
-              <div class="project-top">
-                <h3 class="project-title">Complaint Management System</h3>
-                <p class="project-desc">
-                  Complaint management backend built with NestJS + PostgreSQL.
-                  Team project (built with a teammate) with a modular
-                  architecture.
-                </p>
-              </div>
-
-              <div class="project-meta">
-                <div class="badges">
-                  <span class="badge">NestJS</span>
-                  <span class="badge">PostgreSQL</span>
-                  <span class="badge">REST</span>
-                  <span class="badge">Team Project</span>
+            <!-- Ajyal -->
+            <article class="project card reveal" data-tags="laravel api mysql auth">
+              <div class="project-heading-row">
+                <div>
+                  <p class="project-kicker">Academic Team Project · 2025</p>
+                  <h3 class="project-title">Ajyal — Educational Management System</h3>
                 </div>
+                <span class="project-role">Backend Development</span>
               </div>
 
-              <div class="project-body">
-                <p class="project-label">What I contributed</p>
-                <ul class="bullets">
-                  <li>
-                    Core API endpoints (create/track complaints), validation,
-                    and structured error handling.
-                  </li>
-                  <li>
-                    Database modeling on Postgres and repository/service
-                    structure.
-                  </li>
-                  <li>
-                    Collaboration workflow: code reviews, Git branching, and
-                    feature integration.
-                  </li>
-                </ul>
+              <p class="project-desc">
+                Educational platform connecting administrators, teachers, students, and parents across academic and administrative workflows.
+              </p>
 
-                <p class="project-label">Notes</p>
-                <ul class="bullets">
-                  <li>
-                    Built with a teammate; responsibilities split across
-                    modules/features.
-                  </li>
-                </ul>
+              <div class="badges">
+                <span class="badge badge-core">Laravel</span>
+                <span class="badge">PHP</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">Sanctum</span>
+                <span class="badge">RBAC</span>
               </div>
+
+              <ul class="project-highlights compact">
+                <li>Implemented course, registration, attendance, payment, examination, notification, and access-control workflows.</li>
+                <li>Supported electronic exams, progress tracking, and QR-based student–parent account linking.</li>
+              </ul>
 
               <div class="project-links">
-                <a
-                  class="inline-link"
-                  href="https://github.com/Bilal-kassab/complaint-app"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub Repo →</a
-                >
+                <a class="project-link primary" href="https://ajyal-nine.vercel.app/" target="_blank" rel="noreferrer">Live Project ↗</a>
+                <a class="project-link" href="https://github.com/Mohammad11Jassem/Ajyal-" target="_blank" rel="noreferrer">GitHub Repo ↗</a>
+              </div>
+            </article>
+
+            <!-- UniGo -->
+            <article class="project card reveal" data-tags="laravel api mysql auth">
+              <div class="project-heading-row">
+                <div>
+                  <p class="project-kicker">Academic Team Project · 2024</p>
+                  <h3 class="project-title">UniGo — Tourism Management System</h3>
+                </div>
+                <span class="project-role">Backend Developer</span>
+              </div>
+
+              <p class="project-desc">
+                Tourism management and booking backend for destinations, hotels, airports, flights, trips, bookings, favorites, and administration.
+              </p>
+
+              <div class="badges">
+                <span class="badge badge-core">Laravel</span>
+                <span class="badge">PHP</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">Sanctum</span>
+                <span class="badge">Spatie Permission</span>
+              </div>
+
+              <ul class="project-highlights compact">
+                <li>Developed RESTful services and relational data workflows for authentication, travel inventory, and bookings.</li>
+                <li>Implemented role-based functionality for four administrative roles with protected routes and validation.</li>
+              </ul>
+
+              <div class="project-links">
+                <a class="project-link primary" href="https://github.com/Mohammad11Jassem/tourism-management-system" target="_blank" rel="noreferrer">GitHub Repo ↗</a>
+              </div>
+            </article>
+
+            <!-- Complaint App -->
+            <article class="project card reveal" data-tags="nestjs api postgres redis typeorm realtime">
+              <div class="project-heading-row">
+                <div>
+                  <p class="project-kicker">Team Project</p>
+                  <h3 class="project-title">Complaint Management System</h3>
+                </div>
+                <span class="project-role">NestJS Backend</span>
+              </div>
+
+              <p class="project-desc">
+                Modular complaint-management backend with realtime, asynchronous processing, notifications, media, and administration capabilities.
+              </p>
+
+              <div class="badges">
+                <span class="badge badge-core">NestJS</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">TypeORM</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">Redis</span>
+                <span class="badge">Socket.IO</span>
+              </div>
+
+              <ul class="project-highlights compact">
+                <li>Worked with modular APIs, DTO validation, TypeORM/PostgreSQL modeling, JWT authentication, and structured errors.</li>
+                <li>Applied Redis, Bull queues, scheduled jobs, WebSockets/Socket.IO, OpenAPI, and external service integrations.</li>
+              </ul>
+
+              <div class="project-links">
+                <a class="project-link primary" href="https://github.com/Mohammad11Jassem" target="_blank" rel="noreferrer">GitHub Profile ↗</a>
               </div>
             </article>
           </div>
@@ -400,254 +387,219 @@
       </section>
 
       <!-- SKILLS -->
-      <section class="section" id="skills">
+      <section class="section section-separated" id="skills" aria-labelledby="skills-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head reveal">
             <div>
-              <h2 class="section-title">Skills</h2>
+              <p class="eyebrow">Technical profile</p>
+              <h2 class="section-title" id="skills-title">Skills</h2>
               <p class="section-lead">
-                Filterable map of the backend skills you likely use. Edit freely
-                to match your real experience.
+                A focused view of the tools I use to design, build, secure, and ship backend systems.
               </p>
-            </div>
-
-            <div class="skills-search">
-              <label class="sr-only" for="skillSearch">Search skills</label>
-              <input
-                id="skillSearch"
-                class="input"
-                type="search"
-                placeholder="Search: postgres, auth, docker, ..."
-              />
             </div>
           </div>
 
-          <div class="skills-grid" id="skillsGrid" aria-live="polite">
-            <!-- Backend -->
-            <section class="card skill-group" data-group="backend">
-              <div class="card-header">
-                <h3 class="card-title">Backend</h3>
-                <p class="card-subtitle">
-                  Frameworks, runtime, and API fundamentals
-                </p>
-              </div>
-              <div class="chips">
-                <span class="chip">Laravel</span>
-                <span class="chip">NestJS</span>
-                <span class="chip">PHP</span>
-                <span class="chip">TypeScript</span>
-                <span class="chip">Node.js</span>
-                <span class="chip">RESTful APIs</span>
-                <span class="chip">API Versioning</span>
-                <span class="chip">Validation</span>
-                <span class="chip">Pagination</span>
-                <span class="chip">Rate Limiting</span>
-                <span class="chip">Swagger / OpenAPI</span>
+          <div class="skills-grid">
+            <section class="skill-group skill-primary reveal">
+              <div class="skill-icon" aria-hidden="true">{ }</div>
+              <div>
+                <p class="skill-kicker">Core</p>
+                <h3>Backend &amp; APIs</h3>
+                <p>Primary technologies for application services and communication.</p>
+                <div class="skill-tags">
+                  <span class="skill-tag core">Laravel</span>
+                  <span class="skill-tag core">NestJS</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">RESTful APIs</span>
+                  <span class="skill-tag">WebSockets</span>
+                  <span class="skill-tag">Socket.IO</span>
+                  <span class="skill-tag">Background Jobs &amp; Queues</span>
+                </div>
               </div>
             </section>
 
-            <!-- Databases -->
-            <section class="card skill-group" data-group="databases">
-              <div class="card-header">
-                <h3 class="card-title">Databases</h3>
-                <p class="card-subtitle">
-                  Schema design, queries, and data modeling
-                </p>
-              </div>
-              <div class="chips">
-                <span class="chip">Laravel Sanctum</span>
-                <span class="chip">SOLID</span>
-                <span class="chip">Postman</span>
-                <span class="chip">Insomnia</span>
-                <span class="chip">PostgreSQL</span>
-                <span class="chip">MySQL</span>
-                <span class="chip">SQLite</span>
-                <span class="chip">Swagger / OpenAPI</span>
-                <span class="chip">Git / GitHub</span>
-                <span class="chip">Migrations</span>
-                <span class="chip">Indexing Basics</span>
-                <span class="chip">Transactions</span>
-                <span class="chip">Normalization</span>
-                <span class="chip">Query Optimization Basics</span>
-                <span class="chip">ORM / Query Builder</span>
-                <span class="chip">Docker (Basics)</span>
+            <section class="skill-group reveal">
+              <div class="skill-icon" aria-hidden="true">DB</div>
+              <div>
+                <p class="skill-kicker">Persistence</p>
+                <h3>Data &amp; ORM</h3>
+                <p>Relational storage, caching, and data-access layers.</p>
+                <div class="skill-tags">
+                  <span class="skill-tag core">PostgreSQL</span>
+                  <span class="skill-tag core">MySQL</span>
+                  <span class="skill-tag">Redis</span>
+                  <span class="skill-tag">Prisma ORM</span>
+                  <span class="skill-tag">Eloquent ORM</span>
+                  <span class="skill-tag">TypeORM</span>
+                </div>
               </div>
             </section>
 
-            <!-- Security -->
-            <section class="card skill-group" data-group="security">
-              <div class="card-header">
-                <h3 class="card-title">Security</h3>
-                <p class="card-subtitle">
-                  Auth, authorization, and safe API practices
-                </p>
-              </div>
-              <div class="chips">
-                <span class="chip">Authentication</span>
-                <span class="chip">Authorization</span>
-                <span class="chip">JWT</span>
-                <span class="chip">Sessions</span>
-                <span class="chip">RBAC</span>
-                <span class="chip">Guards / Policies</span>
-                <span class="chip">Input Sanitization</span>
-                <span class="chip">CORS</span>
-                <span class="chip">Hashing</span>
-                <span class="chip">OWASP Basics</span>
+            <section class="skill-group reveal">
+              <div class="skill-icon" aria-hidden="true">🔐</div>
+              <div>
+                <p class="skill-kicker">Access</p>
+                <h3>Authentication &amp; Security</h3>
+                <p>Identity, authorization, and protected application workflows.</p>
+                <div class="skill-tags">
+                  <span class="skill-tag">JWT</span>
+                  <span class="skill-tag">Laravel Sanctum</span>
+                  <span class="skill-tag">RBAC</span>
+                  <span class="skill-tag">Validation</span>
+                </div>
               </div>
             </section>
 
-            <!-- Dev Tools -->
-            <section class="card skill-group" data-group="tools">
-              <div class="card-header">
-                <h3 class="card-title">Tools</h3>
-                <p class="card-subtitle">Daily developer workflow</p>
-              </div>
-              <div class="chips">
-                <span class="chip">Git</span>
-                <span class="chip">GitHub</span>
-                <span class="chip">Postman</span>
-                <span class="chip">Insomnia</span>
-                <span class="chip">Docker</span>
-                <span class="chip">CI/CD Basics</span>
-                <span class="chip">Linux Basics</span>
-                <span class="chip">Logging</span>
-                <span class="chip">Debugging</span>
-                <span class="chip">Environment Config</span>
+            <section class="skill-group reveal">
+              <div class="skill-icon" aria-hidden="true">OPS</div>
+              <div>
+                <p class="skill-kicker">Delivery</p>
+                <h3>DevOps &amp; Tooling</h3>
+                <p>Development workflow, documentation, and deployment fundamentals.</p>
+                <div class="skill-tags">
+                  <span class="skill-tag core">Docker</span>
+                  <span class="skill-tag">Nginx</span>
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">GitHub</span>
+                  <span class="skill-tag">Swagger / OpenAPI</span>
+                  <span class="skill-tag">Postman</span>
+                  <span class="skill-tag">Insomnia</span>
+                </div>
               </div>
             </section>
 
-            <!-- Architecture -->
-            <section class="card skill-group" data-group="architecture">
-              <div class="card-header">
-                <h3 class="card-title">Architecture</h3>
-                <p class="card-subtitle">
-                  Patterns and structure for maintainable code
-                </p>
-              </div>
-              <div class="chips">
-                <span class="chip">Layered Architecture</span>
-                <span class="chip">Clean Code</span>
-                <span class="chip">SOLID Basics</span>
-                <span class="chip">Service/Repository Pattern</span>
-                <span class="chip">DTOs</span>
-                <span class="chip">Dependency Injection</span>
-                <span class="chip">Error Handling</span>
-                <span class="chip">Consistent API Responses</span>
-                <span class="chip">Background Jobs / Queues</span>
-                <span class="chip">Caching Basics</span>
+            <section class="skill-group reveal">
+              <div class="skill-icon" aria-hidden="true">SE</div>
+              <div>
+                <p class="skill-kicker">Engineering</p>
+                <h3>Architecture &amp; Practices</h3>
+                <p>Principles I use to keep systems understandable and maintainable.</p>
+                <div class="skill-tags">
+                  <span class="skill-tag">OOP</span>
+                  <span class="skill-tag">SOLID</span>
+                  <span class="skill-tag">Design Patterns</span>
+                  <span class="skill-tag">Clean Architecture</span>
+                  <span class="skill-tag">Modular Architecture</span>
+                </div>
               </div>
             </section>
 
-            <!-- Testing -->
-            <section class="card skill-group" data-group="testing">
-              <div class="card-header">
-                <h3 class="card-title">Testing</h3>
-                <p class="card-subtitle">Quality and confidence</p>
-              </div>
-              <div class="chips">
-                <span class="chip">Unit Testing Basics</span>
-                <span class="chip">Integration Testing Basics</span>
-                <span class="chip">Mocking</span>
-                <span class="chip">Postman Tests</span>
-                <span class="chip">API Contract Mindset</span>
+            <section class="skill-group reveal">
+              <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+              <div>
+                <p class="skill-kicker">Languages</p>
+                <h3>Programming &amp; Frontend Foundations</h3>
+                <p>Core implementation languages plus practical frontend fundamentals.</p>
+                <div class="skill-tags">
+                  <span class="skill-tag core">PHP</span>
+                  <span class="skill-tag core">TypeScript</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">HTML / CSS</span>
+                  <span class="skill-tag">Tailwind CSS</span>
+                  <span class="skill-tag">Bootstrap</span>
+                  <span class="skill-tag subdued">C++</span>
+                  <span class="skill-tag subdued">Java</span>
+                  <span class="skill-tag subdued">C#</span>
+                </div>
               </div>
             </section>
           </div>
         </div>
       </section>
 
+      <!-- EDUCATION -->
+      <section class="section section-separated" id="education" aria-labelledby="education-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Academic background</p>
+              <h2 class="section-title" id="education-title">Education</h2>
+            </div>
+          </div>
+
+          <article class="education-card reveal">
+            <div class="education-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" role="img">
+                <path d="M5 17.5 24 8l19 9.5L24 27 5 17.5Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M12 22v10.5c5.4 4.2 18.6 4.2 24 0V22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M43 18v12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="education-copy">
+              <p class="education-degree">Bachelor of Information Technology Engineering</p>
+              <h3 class="education-major">Software Engineering</h3>
+              <p class="education-school">Damascus University · Damascus, Syria</p>
+            </div>
+            <div class="education-year">2026</div>
+          </article>
+        </div>
+      </section>
+
       <!-- CONTACT -->
-      <section class="section" id="contact">
-        <div class="container two-col">
-          <div>
-            <h2 class="section-title">Contact</h2>
+      <section class="section section-separated" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <p class="eyebrow">Get in touch</p>
+            <h2 class="section-title" id="contact-title">Let’s build something reliable.</h2>
             <p class="section-lead">
-              <!-- Replace the placeholders with your real links. Keep contact simple and direct. -->
+              I am interested in backend development and software engineering opportunities
+              where I can contribute to maintainable systems and continue growing through production-level work.
             </p>
 
             <div class="contact-cards">
-              <a
-                class="card contact-card"
-                href="mailto:mohamadjaseem2004@gmail.com"
-              >
-                <div class="contact-k">Email</div>
-                <div class="contact-v">mohamadjaseem2004@gmail.com</div>
+              <a class="contact-card" href="mailto:mohammadjaseem2004@gmail.com">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                </span>
+                <span><small>Email</small><strong>mohammadjaseem2004@gmail.com</strong></span>
+                <b>↗</b>
               </a>
-              <a
-                class="card contact-card"
-                href="https://github.com/Mohammad11Jassem"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div class="contact-k">GitHub</div>
-                <div class="contact-v">Mohammad11Jassem</div>
+              <a class="contact-card" href="https://github.com/Mohammad11Jassem" target="_blank" rel="noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M9 19c-4 .9-4-2-5-2m10 4v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.7-1.4 5.7-6.2A4.8 4.8 0 0 0 18 6c.1-.3.5-1.6-.1-3.2 0 0-1-.3-3.4 1.3a11.8 11.8 0 0 0-6.2 0C5.9 2.5 4.9 2.8 4.9 2.8 4.3 4.4 4.7 5.7 4.8 6a4.8 4.8 0 0 0-1.2 3.3c0 4.8 2.9 5.9 5.7 6.2-.4.4-.7.9-.7 1.8V21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span><small>GitHub</small><strong>Mohammad11Jassem</strong></span>
+                <b>↗</b>
               </a>
-              <a
-                class="card contact-card"
-                href="https://www.linkedin.com/in/mohammad-jasseem-7400a927a"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div class="contact-k">LinkedIn</div>
-                <div class="contact-v">/in/MohammadJasseem</div>
+              <a class="contact-card" href="https://www.linkedin.com/in/mohammad-jasseem-7400a927a" target="_blank" rel="noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 9v10M5 5.5v.1M9.5 19v-5.5c0-2.7 4.5-3 4.5 0V19M9.5 9v10M19 19v-6.5c0-5-5-4.7-5-1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <span><small>LinkedIn</small><strong>Professional profile</strong></span>
+                <b>↗</b>
               </a>
             </div>
-
-            <p class="tiny">
-              <!-- Tip: add a short “availability” line here if you want (e.g., “Open to backend roles / freelance projects”). -->
-            </p>
           </div>
 
-          <div>
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Quick message</h3>
-                <p class="card-subtitle">
-                  This form is client-side only (no backend). It opens your
-                  email client.
-                </p>
-              </div>
-
-              <form id="mailForm" class="form">
-                <label class="field">
-                  <span class="field-label">Subject</span>
-                  <input
-                    class="input"
-                    id="mailSubject"
-                    type="text"
-                    placeholder="Backend Project / Opportunity"
-                    required
-                  />
-                </label>
-
-                <label class="field">
-                  <span class="field-label">Message</span>
-                  <textarea
-                    class="textarea"
-                    id="mailBody"
-                    rows="6"
-                    placeholder="Write your message..."
-                    required
-                  ></textarea>
-                </label>
-
-                <button class="btn btn-primary" type="submit">
-                  Open Email
-                </button>
-                <p class="tiny">
-                  No data is sent anywhere; it just creates a mailto link.
-                </p>
-              </form>
+          <div class="contact-panel reveal reveal-delay">
+            <div class="contact-panel-head">
+              <p class="eyebrow">Quick message</p>
+              <h3>Start a conversation</h3>
+              <p>This opens your email client with the message pre-filled.</p>
             </div>
+
+            <form id="mailForm" class="form">
+              <label class="field">
+                <span class="field-label">Subject</span>
+                <input class="input" id="mailSubject" type="text" placeholder="Backend role / Software project" required />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Message</span>
+                <textarea class="textarea" id="mailBody" rows="6" placeholder="Write your message..." required></textarea>
+              </label>
+
+              <button class="btn btn-primary btn-wide" type="submit">Open Email</button>
+              <p class="tiny">No form data is stored or sent by this website.</p>
+            </form>
           </div>
         </div>
       </section>
 
       <footer class="footer">
         <div class="container footer-inner">
-          <p class="tiny">
-            © <span id="year"></span> Mohammad Jasseem. Built with HTML/CSS/JS.
-          </p>
+          <p class="tiny">© <span id="year"></span> Mohammad Jassem. Built with HTML, CSS &amp; JavaScript.</p>
           <a class="inline-link" href="#top">Back to top ↑</a>
         </div>
       </footer>
